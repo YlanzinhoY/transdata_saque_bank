@@ -5,6 +5,7 @@ package cmd
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/spf13/cobra"
 	"github.com/ylanzinhoy/transdata_saque_bank/controller"
@@ -13,17 +14,15 @@ import (
 // saqueCmd represents the saque command
 var saqueCmd = &cobra.Command{
 	Use:   "saque",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Simples comando de sacar seu dinheiro com a menor quantia de notas",
 	Run: func(cmd *cobra.Command, args []string) {
 		var valor int
-		fmt.Println("quanto deseja sacar?")
-		fmt.Scan(&valor)
+		fmt.Println("Olá Sr.Victor quanto deseja sacar?")
+		_, err := fmt.Scan(&valor)
+		if err != nil || valor < 1 {
+			log.Fatal("entrada invalida ou saque pelo menos 1 real")
+			return
+		}
 		controller.Controller(valor)
 	},
 }

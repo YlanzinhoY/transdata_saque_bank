@@ -1,27 +1,21 @@
 /*
 Copyright © 2024 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
 import (
-	"os"
-
 	"github.com/spf13/cobra"
+	"os"
 )
-
-
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "transdata_saque_bank",
-	Short: "A brief description of your application",
+	Use: "transdata_saque_bank",
 	Long: `
 ▗▄▄▄▖▗▄▄▖  ▗▄▖ ▗▖  ▗▖ ▗▄▄▖▗▄▄▄  ▗▄▖▗▄▄▄▖▗▄▖      ▗▄▄▖ ▗▄▖ ▗▄▄▄▖ ▗▖ ▗▖▗▄▄▄▖    ▗▄▄▖  ▗▄▖ ▗▖  ▗▖▗▖ ▗▖
   █  ▐▌ ▐▌▐▌ ▐▌▐▛▚▖▐▌▐▌   ▐▌  █▐▌ ▐▌ █ ▐▌ ▐▌    ▐▌   ▐▌ ▐▌▐▌ ▐▌ ▐▌ ▐▌▐▌       ▐▌ ▐▌▐▌ ▐▌▐▛▚▖▐▌▐▌▗▞▘
   █  ▐▛▀▚▖▐▛▀▜▌▐▌ ▝▜▌ ▝▀▚▖▐▌  █▐▛▀▜▌ █ ▐▛▀▜▌     ▝▀▚▖▐▛▀▜▌▐▌ ▐▌ ▐▌ ▐▌▐▛▀▀▘    ▐▛▀▚▖▐▛▀▜▌▐▌ ▝▜▌▐▛▚▖ 
   █  ▐▌ ▐▌▐▌ ▐▌▐▌  ▐▌▗▄▄▞▘▐▙▄▄▀▐▌ ▐▌ █ ▐▌ ▐▌    ▗▄▄▞▘▐▌ ▐▌▐▙▄▟▙▖▝▚▄▞▘▐▙▄▄▖    ▐▙▄▞▘▐▌ ▐▌▐▌  ▐▌▐▌ ▐▌
-                                                                                                   
 `,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
@@ -31,7 +25,7 @@ var rootCmd = &cobra.Command{
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
-	
+
 	err := rootCmd.Execute()
 	if err != nil {
 		os.Exit(1)
@@ -39,7 +33,7 @@ func Execute() {
 }
 
 func init() {
-	
+
 	// Here you will define your flags and configuration settings.
 	// Cobra supports persistent flags, which, if defined here,
 	// will be global for your application.
@@ -50,5 +44,3 @@ func init() {
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
-
-
