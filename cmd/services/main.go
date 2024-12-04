@@ -1,12 +1,11 @@
-package controller
+package services
 
 import (
 	"fmt"
 	"math"
 )
 
-func Controller(valor int) {
-
+func Saque(valor int) string {
 	notas := []int{
 		100,
 		50,
@@ -24,9 +23,11 @@ func Controller(valor int) {
 		if div > 0 {
 			valor -= int(div) * notas[k]
 			res := int(div)
-			fmt.Printf("Você sacou %d nota(s) de %d\n", res, notas[k])
+			valorFinal := fmt.Sprintf("Você sacou %d nota(s) de %d\n", res, notas[k])
+			return valorFinal
 		}
 
 	}
 
+	return ""
 }
