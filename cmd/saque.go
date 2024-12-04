@@ -19,8 +19,8 @@ var saqueCmd = &cobra.Command{
 		var valor int
 		fmt.Println("Olá Sr.Victor! Quanto deseja sacar?")
 		_, err := fmt.Scan(&valor)
-		if err != nil || valor < 1 {
-			log.Fatal("entrada invalida ou saque pelo menos 1 real")
+		if err != nil || valor <= 1 {
+			log.Fatal("entrada invalida ou saque pelo menos 2 reais")
 			return
 		}
 		controller.Controller(valor)

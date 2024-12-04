@@ -15,7 +15,6 @@ func Controller(valor int) {
 		10,
 		5,
 		2,
-		1,
 	}
 
 	for k := range notas {
@@ -39,7 +38,6 @@ func SaqueControllerComIo(valor int, w io.Writer) {
 		10,
 		5,
 		2,
-		1,
 	}
 
 	for k := range notas {
