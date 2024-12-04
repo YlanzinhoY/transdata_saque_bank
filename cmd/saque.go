@@ -17,7 +17,7 @@ var saqueCmd = &cobra.Command{
 	Short: "Simples comando de sacar seu dinheiro com a menor quantia de notas",
 	Run: func(cmd *cobra.Command, args []string) {
 		var valor int
-		fmt.Println("Olá Sr.Victor quanto deseja sacar?")
+		fmt.Println("Olá Sr.Victor! Quanto deseja sacar?")
 		_, err := fmt.Scan(&valor)
 		if err != nil || valor < 1 {
 			log.Fatal("entrada invalida ou saque pelo menos 1 real")
