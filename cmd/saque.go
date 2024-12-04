@@ -23,7 +23,7 @@ var saqueCmd = &cobra.Command{
 			log.Fatal("entrada invalida ou saque pelo menos 2 reais")
 			return
 		}
-		controller.Controller(valor)
+		controller.SaqueController(valor)
 	},
 }
 
